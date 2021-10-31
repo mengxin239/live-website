@@ -5,4 +5,5 @@ $hostname="数据库地址";
 $username="数据库用户名";
 $password="数据库密码";
 $databases="数据库名";
+$address="直播拉流地址";
 ?>
