@@ -1,6 +1,5 @@
 <?php
-$name = "bilibili";
-$description="something";
+include "config.php";
 ?>
 <html>
 	<head>
@@ -56,13 +55,13 @@ function show(text)
 		  integrity="sha384-cLRrMq39HOZdvE0j6yBojO4+1PrHfB7a9l5qLcmRm/fiWXYY+CndJPmyu5FV/9Tw"
 		  crossorigin="anonymous"
 		/>
-		<title><?php echo $name ?>直播 - <?php echo $description ?></title>
+		<title><?php echo $name ?> - <?php echo $description ?></title>
 	</head>
 	<body class="mdui-theme-primary-indigo mdui-theme-accent-pink">
 		<div class="mdui-container">
 		  <div class="mdui-toolbar mdui-color-theme">
 		    <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
-		    <span class="mdui-typo-title"><?php echo $name ?>直播</span>
+		    <span class="mdui-typo-title"><?php echo $name ?></span>
 		    <div class="mdui-toolbar-spacer"></div>
 		    <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>
 		    <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">refresh</i></a>
