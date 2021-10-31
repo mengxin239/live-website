@@ -70,7 +70,7 @@ function show(text)
 		</div>
 		<center>
 		<video id="video" class="video-js vjs-default-skin" controls autoplay="autoplay" width="640" height="320" data-setup='{}'>
-				 <source src="http://81.70.247.54/live/livestream.m3u8" type="application/x-mpegURL" />
+				 <source src="<?php echo $address; ?>" type="application/x-mpegURL" />
 		</video>
 		<form> 
 		昵 称<input type="text" onkeyup="saveusername(this.value)"><br>
