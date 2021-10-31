@@ -1,6 +1,7 @@
 <?php
+include "config.php";
 if($_GET["request"]=="getupdate"){
-$con=mysqli_connect("localhost","data","123456niu","data");
+$con=mysqli_connect($hostname,$username,$password,$database);
 // 检测连接
 if (mysqli_connect_errno())
 {
@@ -34,13 +35,8 @@ echo $data[2]["name"].":".$data[2]["text"]."<br>";
 echo $data[1]["name"].":".$data[1]["text"]."<br>";
 }
 if($_GET["request"]=="send"){
-	$servername = "localhost";
-	$username = "data";
-	$password = "123456niu";
-	$dbname = "data";
-	 
 	// 创建连接
-	$conn = new mysqli($servername, $username, $password, $dbname);
+	$conn = new mysqli($hostname, $username, $password, $database);
 	// 检测连接
 	if ($conn->connect_error) {
 	    die("连接失败: " . $conn->connect_error);
