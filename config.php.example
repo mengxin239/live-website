@@ -1,0 +1,13 @@
+<?php
+$name = "站点名字";
+$description="说明";
+$method="http"//如果你的网站支持https的话可以改成https
+$websiteurl="网站域名";//示例 example.com
+$hostname="127.0.0.1";
+$username="用户名";
+$password="密码";
+$database="数据库名";
+$address="拉流地址";
+$starttime="直播开始时间";
+$endtime="直播结束时间";
+?>

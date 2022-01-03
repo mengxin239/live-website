@@ -35,6 +35,9 @@ echo $data[2]["name"].":".$data[2]["text"]."<br>";
 echo $data[1]["name"].":".$data[1]["text"]."<br>";
 }
 if($_GET["request"]=="send"){
+	if($_GET["sure"]=="false"){
+		exit();
+	}
 	// 创建连接
 	$conn = new mysqli($hostname, $username, $password, $database);
 	// 检测连接
@@ -51,4 +54,14 @@ if($_GET["request"]=="send"){
 	    echo "Error: " . $sql . "<br>" . $conn->error;
 	}
 	$conn->close();
-}?>
+}
+if($_GET["request"]=="islive"){
+	exec("curl -Ls http://".$srsip.":".$srsport."/api/v1/streams",$return);
+	$decode=json_decode($return[0],true);
+	if($decode['streams'][0]['publish']['active']){
+		echo "True";
+	} else {
+		echo "False";
+	}
+}
+?>
